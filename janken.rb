@@ -11,12 +11,8 @@ class Janken
   def select_hand
     hands = ["グー", "チョキ", "パー"]
     case @input_hand
-    when 0
-      @my_hand = hands[0]
-    when 1
-      @my_hand = hands[1]
-    when 2
-      @my_hand = hands[2]
+    when 0, 1, 2
+      @my_hand = hands[@input_hand]
     else
       @my_hand = nil
     end
@@ -39,14 +35,8 @@ class Janken
     puts "--------------------"
 
     case input_angle
-    when 0
-      @my_angle = angles[0]
-    when 1
-      @my_angle = angles[1]
-    when 2
-      @my_angle = angles[2]
-    when 3
-      @my_angle = angles[3]
+    when 0, 1, 2, 3
+      @my_angle = angles[input_angle]
     else
       @my_angle = nil
     end
